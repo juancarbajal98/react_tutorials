@@ -1,8 +1,7 @@
-import React from "react";
-import App from './basics';
-// import App from './App';
-// createRoot replaces deprecated reactDOM.render
+import React from 'react';
 import { createRoot } from 'react-dom/client';
+// import App from './App';
+import App from './Window';
 
 const container = document.getElementById('root')
 const root = createRoot(container)
