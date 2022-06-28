@@ -1,6 +1,6 @@
 import React from "react";
-import App from './basics';
-// import App from './App';
+// import App from './basics';
+import App from './App';
 // createRoot replaces deprecated reactDOM.render
 import { createRoot } from 'react-dom/client';
 

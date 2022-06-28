@@ -1,29 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
+import MovieCard from "./MovieCard";
 
 import './App.css'
 import searchIcon from './search.svg'
 const omdb_url = `http://www.omdbapi.com?apikey=${process.env.REACT_APP_OMDB_KEY}`
 
-const movie1 = {
-  "Title": "Shrek",
-  "Year": "2001",
-  "imdbID": "tt0126029",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-}
-
 const App = () => {
 
-  const searchMovies = async (title) => {
-    const response = await fetch(`${omdb_url}&s=${title}`)
-    const data = await response.json()
+  const [movies, setMovies] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
 
-    console.log(data.Search)
+  const searchMovies = async () => {
+    const response = await fetch(`${omdb_url}&s=${searchTerm}`)
+    const data = await response.json()
+    setMovies(data.Search)
   }
 
   useEffect(() => {
-   searchMovies(`Shrek`);
-  }, [])
+   searchMovies(searchTerm);
+  }, [searchTerm])
   return (
   <div className="app">
     <h1>MovieLand</h1>
@@ -31,8 +27,8 @@ const App = () => {
     <div className="search">
       <input 
         placeholder = "Search for movies"
-        value="Superman"
-        onChange={() => {}}
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
       <img
         src={searchIcon}
@@ -40,31 +36,19 @@ const App = () => {
         onClick={() => {}}
       />
     </div>
-
-    <div className="container">
-      <div className="movie">
-        <div>
-          <p>{movie1.Year}</p>
+    {
+      movies?.length > 0 ? 
+      (    
+      <div className="container">
+        {movies.map(movie => { return <MovieCard movie={movie}/>})}
+      </div> 
+      ): 
+      (
+        <div className="empty">
+          <h2>No movies found.</h2>
         </div>
-        {/* this assumes a poster is defined for every result- which is not always the case
-        <div>
-          <img src={movie1.Poster} alt="poster"/>
-        </div> 
-        */}
-
-        {/* instead we introduce a ternary */}
-        <div>
-          <img 
-            src = { movie1.Poster !== 'N/A' ? movie1.Poster : 'http://via.placeholder.com/400' } 
-            alt="poster"/>
-        </div>
-
-        <div>
-          <span>{movie1.Type}</span>
-          <h3>{movie1.Title}</h3>
-        </div>
-      </div>
-    </div>
+      )
+    }
   </div>
   );
 }
