@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SingleColor from './SingleColor'
+import SingleColor_c2u from './SingleColor_c2u'
 
 import './App.css'
 
@@ -10,8 +11,12 @@ function App() {
   const [error, setError] = useState(false)
   const [colorList, setColorList] = useState(new Values(`#f15025`).all(10))
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+
+  useEffect(()=>{
+    if(color.length === 7){ handleSubmit()}
+  }, [color])
+
+  const handleSubmit = () => {
     try{
       let colors = new Values(color).all(10)
       setColorList(colors)
@@ -38,10 +43,19 @@ function App() {
     </section>
     <section className="colors">
       {colorList.map ((color, index) => {
-        console.log(`Color: ${JSON.stringify(color)}` )
-        console.log(`Index: ${index}` )
-        // todo undestand syntax here
-        return <SingleColor key={index} {...color} index={index}/> 
+        /* 
+        this version uses SingleColor.jsx - the difference is the action
+        triggered on clicking the color card. This one copies the hex to 
+        clipboard
+        */
+        return <SingleColor key={index} {...color} index={index}/>  
+
+        /* 
+        This one passes the color setter to the child component so that 
+        the color state is updated when a SingleColor is clicked
+        c2u: Click to Update
+        */
+        // return <SingleColor_c2u key={index} {...color} index={index} setter={setColor}/> 
       })}
     </section>
     </>
