@@ -1,0 +1,141 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+.container{
+  width: 550px;
+  height: 868px;
+  background-color: #23252C;
+}
+
+/* headshot */
+.headshot{
+  display: block;
+  margin: auto;
+  padding-top: 44px;
+}
+
+/* content */
+.content--container{
+  width: 317px;
+  height: 399px;
+  background-color: #1A1B21;
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.content--container > h2,
+.content--container > p,
+.content--container > div > h4,
+.content--container > div > p{
+  margin: 0;
+}
+
+.content--name{
+  padding-block: 21px 6px;
+}
+
+.content--role{
+  color: #F3BF99;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+
+.content--site{
+  font-size: 10px;
+  padding-bottom: 15px;
+}
+
+.content--buttons-container{
+  width: 247px;
+  height: 34px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.content--button{
+  width: 115px;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+}
+
+.email{
+  background-color: white;
+  color: black;
+}
+
+.email > img, .linkedin > img{
+  width: 16px;
+  height: 16px;
+}
+
+.email > p, .linkedin > p{
+  margin: 0;
+}
+
+.linkedin{
+  background-color: #5093E2;
+}
+
+/* .content--buttons-container > button{
+  width: 115px;
+  height: 100%;
+  font-size: 14px;
+}
+
+.content--linkedin{
+  background-color: #5093E2;
+  color: white;
+} */
+
+.content--text-container{
+  padding: 33px 34px 0 36px;
+  text-align: left;
+}
+
+.content--text-container > h4{
+  padding-bottom: 5px;
+}
+
+.content--text-container > p{
+  font-size: 10.24px;
+  line-height: 150%;
+  padding-bottom: 17px;
+}
+
+
+/* footer */
+.footer--container{
+  width: 317px;
+  height: 64px;
+  background-color: #161619;
+  display: flex;
+  margin: auto;
+  border-radius: 0 0 10px 10px; 
+}
+
+.footer--icon-container{
+  width: 171.5px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer--icon-container > img{
+  width: 25px;
+  height: 25px;
+}
