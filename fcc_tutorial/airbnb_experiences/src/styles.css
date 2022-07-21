@@ -1,0 +1,63 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+/* nav */
+.navbar{
+  position: absolute;
+  width: 550px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.navbar > img{
+  position: absolute;
+  width: 82.02px;
+  height: 25.35px;
+  left: 30px;
+  top: 22px;
+}
+
+/* hero */
+.imagegrid--container{
+  position: absolute;
+  width: 395.91px;
+  height: 232px;
+  left: 77px;
+  top: 96px;
+  background: no-repeat center/100% url("./images/image-grid-photos.png");
+}
+
+.hero--text > h1{
+  position: absolute;
+  width: 347px;
+  height: 40px;
+  left: 36px;
+  top: 360px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 110%;
+  color: #000000;
+}
+
+.hero--text > h4{
+  position: absolute;
+  width: 320px;
+  height: 56px;
+  left: 36px;
+  top: 416px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 110%;
+  color: #222222;
+}
