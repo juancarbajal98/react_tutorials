@@ -1,0 +1,77 @@
+/* 
+GLOBAL STYLES
+*/
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #282D35;
+}
+
+/* 
+HEADER
+*/
+nav{
+  display: flex;
+  align-items: center;
+  background-color: #21222A;
+  height: 90px;
+  padding: 30px 26px;
+}
+
+.nav--logo_text, .nav--title{
+  margin: 0;
+}
+
+.nav--logo_text{
+  margin-right: auto;
+  color: #61DAFB;
+  font-size: 22px;
+}
+
+.nav--title{
+  color: #DEEBF8;
+}
+
+
+.nav--icon{
+  width: 30px;
+  margin-right: 7px;
+}
+
+/* 
+CONTENT
+*/
+main{
+  color: white;
+  padding: 57px 27px;
+  /* single image, x: right, y:75% and url-specified */
+  background: no-repeat right 75%
+  url('./images/react-icon-large.png');
+  /* background-image: url('./images/react-icon-large.png');
+  background-repeat: no-repeat;
+  background-position: right 75%; */
+}
+.content--title{
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.content--list{
+  margin-top: 46px;
+}
+
+.content--list > li {
+  line-height: 19px;
+  padding-block: 10px; /* works for top and bottom padding */
+  max-width: 400px; /* enforces line break */
+}
+
+.content--list > li::marker {
+  font-size: 1.4rem;
+  color: #61DAFB;
+}
