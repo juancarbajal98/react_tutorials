@@ -1,0 +1,93 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* navbar */
+.navbar{
+  /* dimensions */
+  width: 550px;
+  height: 55px;
+  background-color: #F55A5A;
+  /* alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  /* text */
+  color: #FFFFFF;
+  font-size: 14.46px;
+}
+
+.navbar--earth-icon{
+  height: 24px;
+  width: 24px;
+}
+/* journal entries */
+.journalEntries{
+  display: flex;
+  flex-direction: column;
+}
+
+.journalEntry{
+  width: 550px;
+  height: 231px;
+  padding: 45px 40px 18px 40px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.journalEntry > img{
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  margin-right: 19px;
+}
+
+.journalEntry--col{
+  width: 326px;
+  height: 168px;
+  font-size: 10.24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.journalEntry--marker-icon{
+  width: 7px;
+  height: 9.55px;
+  margin-right: 4px;
+}
+
+.journalEntry--location{
+  letter-spacing: 0.17em;
+  margin-right: 12px;
+}
+
+.journalEntry--google-maps{
+  color: #918E9B;
+}
+
+.journalEntry--col > h2{
+  font-size: 25px;
+  margin-block: 4px 17px;
+}
+
+.journalEntry--date{
+  margin: 0;
+}
+
+.journalEntry--desc{
+  line-height: 150%;
+  color: #2B283A;
+  margin-top: 9px;
+}
