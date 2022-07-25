@@ -4,60 +4,113 @@
 
 body{
   margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.gray{
+  color: #918E9B;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 /* nav */
 .navbar{
-  position: absolute;
   width: 550px;
   height: 70px;
-  left: 0px;
-  top: 0px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
-.navbar > img{
-  position: absolute;
-  width: 82.02px;
-  height: 25.35px;
-  left: 30px;
-  top: 22px;
+.navbar--image{ 
+  margin: 22px 30px;
 }
 
 /* hero */
-.imagegrid--container{
-  position: absolute;
-  width: 395.91px;
-  height: 232px;
-  left: 77px;
-  top: 96px;
-  background: no-repeat center/100% url("./images/image-grid-photos.png");
+.hero{
+  display: flex;
+  flex-direction: column;
 }
 
-.hero--text > h1{
-  position: absolute;
-  width: 347px;
-  height: 40px;
-  left: 36px;
-  top: 360px;
-  font-family: 'Poppins';
+.hero--image{
+  margin-top: 26px;
+  max-width: 400px;
+  align-self: center;
+}
+
+.hero--header{
+  margin: 32px 0 16px 36px;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 110%;
-  color: #000000;
 }
 
-.hero--text > h4{
-  position: absolute;
+.hero--text{
+  margin: 0 0 49px 36px;
   width: 320px;
-  height: 56px;
-  left: 36px;
-  top: 416px;
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 110%;
-  color: #222222;
+}
+
+/* cards */
+.cards{
+  margin: 0 0 30px 36px;
+  display: flex;
+  gap: 18px;
+}
+
+.card{
+  width: 177px;
+  height: 302px;
+}
+
+.card--top{
+  position: relative;
+}
+
+.card--status{
+  /* visuals */
+  width: 61px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  font-size: 10.24px;
+  line-height: 110%;
+  /* positioning on page */
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  z-index: 1000;
+  /* centering */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card--image{
+  width: 176px;
+  height: 235px;
+}
+
+.card--bottom{
+  margin-top: 9px;
+  width: 176px;
+  height: 58px;
+}
+
+.card--bottom{
+  font-size: 12px;
+}
+
+.card--bottom > p{
+  margin-block: 8px;
+}
+
+.card--star{
+  width: 14px;
 }

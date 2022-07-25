@@ -2,7 +2,7 @@ import airbnbIcon from "../images/airbnb-icon.png"
 const Navbar = () => {
   return (
   <nav className="navbar">
-    <img src={airbnbIcon}/>
+    <img className="navbar--image" src={airbnbIcon}/>
   </nav>
   )
 };
