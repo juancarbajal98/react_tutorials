@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputForm = ({meme, setMeme}) => {
+const InputForm = ({setMeme}) => {
   
   const handleNewText = (newText, objKey) => {
     setMeme((prevMeme) => { 
