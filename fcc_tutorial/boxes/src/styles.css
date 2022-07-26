@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+.box{
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0 2px 2px 0;
+}
