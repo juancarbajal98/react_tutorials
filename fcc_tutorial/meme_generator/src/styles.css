@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+/* header */
+.header{
+  width: 550px;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header > img{
+  width: 31.31px;
+  height: 26.22px;
+  margin: 19px 6.69px 19.78px 20px; 
+}
+
+.header > h3{
+  font-size: 20.75px;
+  font-weight: bold;
+  letter-spacing: -0.1em;
+  margin-right: 173.21px;
+}
+
+.header > p{
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+/* meme controls */
+.memeControls{
+  margin-block: 36px;
+}
+.inputForm{
+  width: 477px;
+  height: 35px;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputForm > input{
+  width: 230px;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  padding: 10px 0 10.78px 11px;
+  font-size: 12px;
+}
+
+.newMemeButton{
+  width: 477px;
+  height: 40px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  
+  color: #FFFFFF;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.1em;
+
+  display: flex;
+  margin: 15px auto;
+  align-items: center;
+  justify-content: center;
+}
+/* meme display */
