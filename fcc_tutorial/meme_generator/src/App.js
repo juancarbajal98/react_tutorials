@@ -30,7 +30,7 @@ const App = () => {
     <React.Fragment>
       <Header/>
       <section className="memeControls">
-        <InputForm setMeme={setMeme}/>
+        <InputForm meme={meme} setMeme={setMeme}/>
         <NewMemeButton allMemeImages={allMemeImages} setMeme={setMeme}/>
       </section>
       <section className="memeDisplay">

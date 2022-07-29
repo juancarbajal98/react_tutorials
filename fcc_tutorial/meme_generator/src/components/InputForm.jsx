@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputForm = ({setMeme}) => {
+const InputForm = ({meme, setMeme}) => {
   
   const handleNewText = (newText, objKey) => {
     setMeme((prevMeme) => { 
@@ -14,15 +14,17 @@ const InputForm = ({setMeme}) => {
   return(
   <div className="inputForm">
     <input 
+    type="text"
     className="top-text" 
     placeholder="Top text"
-    type="text"
+    value={meme.topText}
     onChange={(e) => handleNewText(e.target.value, 'topText')}
     ></input>
     <input 
+    type="text"
     className="bottom-text" 
     placeholder="Bottom text"
-    type="text"
+    value={meme.bottomText}
     onChange={(e) => handleNewText(e.target.value, 'bottomText')}
     ></input>
   </div>
